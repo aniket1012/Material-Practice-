@@ -9,10 +9,12 @@ import {
   CssBaseline,
   Grid, 
   Toolbar, 
-  Container 
+  Container,
+  Button 
 } from '@material-ui/core'; 
 
 import { PhotoCamera } from '@material-ui/icons';
+
 
 function App() {
   return (
@@ -35,8 +37,23 @@ function App() {
           <Typography variant='h5' align='center' color='textSecondary' paragraph>
             hello everyon this is a phot album, imtrying to make this sentetnace as long as possible so we cans eee how it wokrs
           </Typography>
+          <div>
+            <Grid container spacing={2} justify='center'>
+              <Grid item>
+                <Button variant='contained' color='primary'>
+                  See my photos
+                </Button> 
+              </Grid>
+              <Grid item>
+                <Button variant='contained' color='primary'>
+                  Secondary Action 
+                </Button> 
+              </Grid>
+            </Grid>
+          </div>
         </Container>
       </div>
+      
     </main>
    </>
         
