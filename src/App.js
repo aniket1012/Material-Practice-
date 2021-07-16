@@ -14,22 +14,27 @@ import {
 } from '@material-ui/core'; 
 
 import { PhotoCamera } from '@material-ui/icons';
+import useStyles from './styles';
+
 
 
 function App() {
+
+  const classes = useStyles()
+
   return (
    <>
     <CssBaseline/>
     <AppBar position='relative'>
       <Toolbar>
-        <PhotoCamera/>
+        <PhotoCamera className={classes.icon}/>
         <Typography variant='h6'>
           PhotoAlbum
         </Typography>
       </Toolbar>
     </AppBar>
     <main>
-      <div>
+      <div className={classes.container}>
         <Container maxWidth='sm'>
           <Typography variant='h2' align='center' color='textPrimary' gutterBottom>
             PhotoAlbum
@@ -37,7 +42,7 @@ function App() {
           <Typography variant='h5' align='center' color='textSecondary' paragraph>
             hello everyon this is a phot album, imtrying to make this sentetnace as long as possible so we cans eee how it wokrs
           </Typography>
-          <div>
+          <div className={classes.buttons}>
             <Grid container spacing={2} justify='center'>
               <Grid item>
                 <Button variant='contained' color='primary'>
